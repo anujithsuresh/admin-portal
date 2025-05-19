@@ -11,7 +11,7 @@
 <table class="table table-bordered">
     <thead class="table-dark">
         <tr class="text-center">
-            <th>ID</th>
+            <th>SlNo</th>
             <th>Customer</th>
             <th>Date</th>
             <th>Amount</th>
@@ -22,7 +22,7 @@
     <tbody>
         @foreach ($invoices as $invoice)
         <tr>
-            <td>{{ $invoice->id }}</td>
+            <td>{{ $loop->iteration }}</td>
             <td>{{ $invoice->customer->name }}</td>
             <td>{{ $invoice->date }}</td>
             <td>{{ $invoice->amount }}</td>

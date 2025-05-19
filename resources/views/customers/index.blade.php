@@ -11,7 +11,7 @@
 <table class="table table-bordered">
     <thead class="table-dark">
         <tr class="text-center">
-            <th>ID</th>
+            <th>SlNo</th>
             <th>Name</th>
             <th>Phone</th>
             <th>Email</th>
@@ -22,7 +22,7 @@
     <tbody>
         @foreach ($customers as $customer)
         <tr>
-            <td>{{ $customer->id }}</td>
+            <td>{{ $loop->iteration }}</td>
             <td>{{ $customer->name }}</td>
             <td>{{ $customer->phone }}</td>
             <td>{{ $customer->email }}</td>
@@ -45,6 +45,4 @@
         @endforeach
     </tbody>
 </table>
-<a href="{{ route('admin') }}" class="btn btn-primary">Go to Admin Dashboard</a>
-
 @endsection
