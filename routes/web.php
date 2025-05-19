@@ -2,23 +2,19 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PortalController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\InvoiceController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-*/
-
 // Public welcome page
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
-// Auth routes
 require __DIR__.'/auth.php';
 
 // Profile management (after login)
@@ -32,7 +28,6 @@ Route::middleware('auth')->group(function () {
 // Redirect after login
 Route::get('/dashboard', function () {
     return redirect()->route('admin');
-    // return redirect()->route('admin');
 })->middleware(['auth'])->name('dashboard');
 
 Route::middleware(['auth'])->group(function () {

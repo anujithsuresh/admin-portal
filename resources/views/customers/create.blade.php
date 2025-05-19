@@ -1,6 +1,8 @@
 @extends('layouts.admin')
 
 @section('content')
+
+
 <h2 class="mb-4">Add New Customer</h2>
 
 <a href="{{ route('customers.index') }}" class="btn btn-secondary mb-3">← Back to List</a>
@@ -39,4 +41,5 @@
 
     <button type="submit" class="btn btn-primary">Save Customer</button>
 </form>
+
 @endsection

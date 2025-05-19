@@ -9,7 +9,6 @@ class CustomerController extends Controller
 {
     public function index()
     {
-        // $customers = Customer::all();
         $customers = Customer::with('invoices')->get();
         return view('customers.index', compact('customers'));
     }

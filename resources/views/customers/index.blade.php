@@ -10,7 +10,7 @@
 
 <table class="table table-bordered">
     <thead class="table-dark">
-        <tr>
+        <tr class="text-center">
             <th>ID</th>
             <th>Name</th>
             <th>Phone</th>
@@ -27,7 +27,7 @@
             <td>{{ $customer->phone }}</td>
             <td>{{ $customer->email }}</td>
             <td>{{ $customer->address }}</td>
-            <td>
+            <td class="text-center">
                 @if ($customer->invoices->count() > 0)
                 <button class="btn btn-sm btn-secondary" disabled>Edit</button>
                 <button class="btn btn-sm btn-secondary" disabled>Delete</button>
@@ -45,10 +45,6 @@
         @endforeach
     </tbody>
 </table>
-<form method="POST" action="{{ route('logout') }}">
-    @csrf
-    <button type="submit" class="btn btn-danger">
-        {{ __('Log Out') }}
-    </button>
-</form>
+<a href="{{ route('admin') }}" class="btn btn-primary">Go to Admin Dashboard</a>
+
 @endsection

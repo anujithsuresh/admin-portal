@@ -10,7 +10,7 @@
 
 <table class="table table-bordered">
     <thead class="table-dark">
-        <tr>
+        <tr class="text-center">
             <th>ID</th>
             <th>Customer</th>
             <th>Date</th>
@@ -27,7 +27,7 @@
             <td>{{ $invoice->date }}</td>
             <td>{{ $invoice->amount }}</td>
             <td>{{ $invoice->status }}</td>
-            <td>
+            <td class="text-center">
                 <a href="{{ route('invoices.edit', $invoice->id) }}" class="btn btn-sm btn-primary">Edit</a>
 
                 <form action="{{ route('invoices.destroy', $invoice->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Are you sure?')">
