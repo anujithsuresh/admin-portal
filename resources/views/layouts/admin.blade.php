@@ -40,11 +40,8 @@
 
         .main-content {
             margin-top: 60px;
-            /* height of header */
             margin-bottom: 50px;
-            /* height of footer */
             height: calc(100vh - 110px);
-            /* full height minus header and footer */
             overflow-y: auto;
         }
 
