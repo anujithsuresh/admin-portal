@@ -31,18 +31,18 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="phone" class="form-label">Phone</label>
-                    <input type="text" name="phone" class="form-control" placeholder="Enter phone number">
+                    <label for="phone" class="form-label">Phone <span class="text-danger">*</span></label>
+                    <input type="tel" name="phone" class="form-control" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="Enter email address">
+                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter email address" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="address" class="form-label">Address</label>
-                    <textarea name="address" class="form-control" rows="3" placeholder="Enter address"></textarea>
+                    <label for="address" class="form-label">Address <span class="text-danger">*</span></label>
+                    <textarea name="address" class="form-control" rows="3" placeholder="Enter address" required></textarea>
                 </div>
 
                 <div class="text-end">
