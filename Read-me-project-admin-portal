@@ -1,0 +1,24 @@
+                        Laravel Admin Portal Project Documentation 
+
+
+Submitted by: Anujith Suresh 
+Date: 21/05/2025 
+Project Name: Admin Portal 
+Framework Used: Laravel 
+Laravel Framework Version: 12.14.1 
+PHP Version: 8.2.0 
+Database: MySQL 
+Database Name: admin-portal 
+Setup Instructions:  
+1. git clone https://github.com/anujithsuresh/admin-portal.git  
+2. Run composer install  
+3. Run npm install  
+4. Run npm run dev  
+5. cp .env.example .env  
+6. Set .env with DB credentials  
+7. Run php artisan key:generate  
+8. Run php artisan migrate  
+9. Start server: php artisan serve 
+Change URL for API 
+C:\Users\ws\admin-portal\resources\views\api\index.blade.php 
+fetch(`http://127.0.0.1:8000/api/entity?id=${customerId}`) (Change this line with your url for API)  
